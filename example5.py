@@ -26,7 +26,7 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b' for collude or betray.
     '''
     # If the other player has betrayed or this is the last half of the game, 
-    if 'b' in their_history or len(their_history)>100: 
+    if 'b' in their_history or len(their_history)>150: 
         return 'b'               # Betray.
     else:
         return 'c'         # but 90% of the time collude
