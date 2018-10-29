@@ -29,8 +29,16 @@ def move(my_history, their_history, my_score, their_score):
       return 'c'
     elif 'b' in their_history:
         return 'b'
-    
+    elif len(my_history) >= 1:
+      return their_history[-1] 
+    elif len(my_history) > 100 and 'b' in their_history > 'b' in my_history:
+        return 'b'
+
+    elif 'b' in their_history or len(their_history)>150: 
+        return 'b'              
+    else:
         return 'c'
+
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
